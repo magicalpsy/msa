@@ -1,4 +1,4 @@
-## 사용법
+## 1. 사용법
 
-- docker build -rm -t 이미지명
-- ex: docker build -rf -t magicalpsy/ubuntu_nginx
+- docker build -rm -t 이미지명 .
+- ex: docker build -rf -t magicalpsy/ubuntu_nginx .
