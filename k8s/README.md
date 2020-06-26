@@ -27,7 +27,15 @@ kubectl scale deployment ubuntu-nginx --replicas=20
 ```
 kubectl expose deployment/ubuntu-nginx --type="NodePort" --port 80
 ```
-## 4. 포트 확인 하기
+## 4. pod 20 개 deploy 확인 하기
+```
+kubectl get deployments
+NAME                READY   UP-TO-DATE   AVAILABLE   AGE
+nginx               4/4     4            4           6h10m
+ubuntu-nginx        20/20   20           20          89m
+
+```
+## 5. 포트 확인 하기
 ```
 kubectl describe deployments/ubuntu-nginx
 ### - 결과 확인
@@ -45,7 +53,7 @@ Pod Template:
   Volumes:        <none>
 Conditions:
 ```
-## 5. service 포트 확인 및 실행 확인
+## 6. service 포트 확인 및 실행 확인
 ```
 포트 확인
 $ kubectl.exe get service
