@@ -8,6 +8,13 @@
     RUN apt install -y nginx ## nginx 를 설치 할 때
     CMD ["nginx", "-g", "daemon off;"] ## nginx 데몬을 실행 해서 웹 어플리 케이션 준비
 ```
+# 0-1 참고 사항
+```
+  계정명 = magicalpsy
+  생성되는(된) 이미지명 = ubuntu_nginx
+  컨테이너 명 = name n1
+  포트 지정 외부 포트 8888 과 생성 이미지 80 연결 = -p 8888:80
+```
 # 1. git clone 하여 Dockerfile 다운 받기
 ```
 Git 에서 Docker build 파일 받기
