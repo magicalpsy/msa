@@ -1,4 +1,4 @@
-# 1. Dockerfile(build script) 만들기(사용법)
+# 0.  작업 Dockerfile(build script) 만들기(사용법)
 ```
 1-1. touch Dockerfile # 이름 까지 동일 해야 함.
 1-2. 편집기로 Dockerfile 진입
@@ -6,13 +6,26 @@
     FROM ubuntu   ## dock 허브의 ubuntu 이미지가 베이스가 됨
     RUN apt update ## apt update를 통해 app 설치 환경 설정
     RUN apt install -y nginx ## 설치할 파일
-    CMD ["nginx", "-g", "daemon off;"]
+    CMD ["nginx", "-g", "daemon off;"] ## nginx 데몬을 실행 해서 웹 어플리 케이션 준비
 ```
-# 2. Docerfile Build 부터 실행 까지
+# 1. git clone 하여 Dockerfile 다운 받기
 ```
-2-1 Dockerfile Build(이미지 생성)
-build : docker build -t magicalpsy/ubuntu_nginx
+Git 에서 Docker build 파일 받기
+  git clone https://github.com/magicalpsy/msa.git  
+  cd msa
+  ls
+
+결과 확인 (Dockerfile 이 있는지 확인 하기)
+  user@DESKTOP-14530KF MINGW64 ~/work/msa (master)
+  $ ls
+  Dockerfile  k8s/  README.md
 ```
+# 2. Dockerfile Build 부터 실행 까지
+## 2-1 Dockerfile Build(이미지 생성)
+```
+build : docker build -t magicalpsy/ubuntu_nginx .
+```
+## 2-2 결과확인
 ```
 결과확인
 $ docker images
@@ -20,12 +33,12 @@ REPOSITORY                           TAG                                        
 magicalpsy/ubuntu_nginx              latest                                           debd948b5016        4 minutes ago       155MB
 magicalpsy/nginx                     latest                                           4a29fccac1a9        46 hours ago        183MB
 ```
+## 2-3 Dockerfile 실행
 ```
-Dockerfile 실행
 $ winpty docker run -it --name n1 -p 8888:80 magicalpsy/ubuntu_nginx
 ```
+## 2-4 결과확인
 ```
-결과 확인
 $ curl localhost:8888
 
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -59,5 +72,4 @@ Commercial support is available at
 # 3. Dockhub 에 push 하기
 ```
   docker push magicalpsy/ubuntu_nginx
-  
 ```

@@ -2,6 +2,7 @@
 ```
 Doker Hub 에 image 가 있어야함.
 ```
+# ** k8s.sh 의 상세 설명 및 결과 ** 
 ## 1. 파일 불러 오고 배치 하기
 ```
 kubectl run <Deploy명> --image=<DockHub이미지> --port=80
@@ -16,7 +17,7 @@ $ kubectl get deployments
 NAME                READY   UP-TO-DATE   AVAILABLE   AGE
 abcde               1/1     1            1           42m
 nginx               4/4     4            4           4h45m
-ubuntu-nginx        20/20   20           20          3m35s
+ubuntu-nginx        1/1     1            1          3m35s
 ```
 ## 2. Pod 20개 사용
 ```
@@ -44,7 +45,7 @@ Pod Template:
   Volumes:        <none>
 Conditions:
 ```
-## 5. 최종 포트 및 실행 확인
+## 5. service 포트 확인 및 및 실행 확인
 ```
 포트 확인
 $ kubectl.exe get service
