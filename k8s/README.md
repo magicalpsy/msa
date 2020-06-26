@@ -2,7 +2,7 @@
 ```
 Doker Hub 에 image 가 있어야함.
 ```
-# ** k8s.sh 의 상세 설명 및 결과 ** 
+# ** k8s.sh 의 상세 설명 및 결과 **
 ## 1. 파일 불러 오고 배치 하기
 ```
 kubectl run <Deploy명> --image=<DockHub이미지> --port=80

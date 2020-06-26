@@ -79,4 +79,5 @@ Commercial support is available at
 # 3. Dockhub 에 push 하기
 ```
   docker push magicalpsy/ubuntu_nginx
+  docker 이미지 접속 주소 : https://hub.docker.com/repository/docker/magicalpsy/ubuntu_nginx
 ```
