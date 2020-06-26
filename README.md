@@ -5,7 +5,7 @@
 1-3. build script 만들기
     FROM ubuntu   ## dock 허브의 ubuntu 이미지가 베이스가 됨
     RUN apt update ## apt update를 통해 app 설치 환경 설정
-    RUN apt install -y nginx ## 설치할 파일
+    RUN apt install -y nginx ## nginx 를 설치 할 때
     CMD ["nginx", "-g", "daemon off;"] ## nginx 데몬을 실행 해서 웹 어플리 케이션 준비
 ```
 # 1. git clone 하여 Dockerfile 다운 받기
