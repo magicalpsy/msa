@@ -45,7 +45,7 @@ Pod Template:
   Volumes:        <none>
 Conditions:
 ```
-## 5. service 포트 확인 및 및 실행 확인
+## 5. service 포트 확인 및 실행 확인
 ```
 포트 확인
 $ kubectl.exe get service
