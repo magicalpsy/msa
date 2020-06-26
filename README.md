@@ -33,7 +33,7 @@ REPOSITORY                           TAG                                        
 magicalpsy/ubuntu_nginx              latest                                           debd948b5016        4 minutes ago       155MB
 magicalpsy/nginx                     latest                                           4a29fccac1a9        46 hours ago        183MB
 ```
-## 2-3 Dockerfile 실행
+## 2-3 Docker image 실행
 ```
 $ winpty docker run -it --name n1 -p 8888:80 magicalpsy/ubuntu_nginx
 ```
